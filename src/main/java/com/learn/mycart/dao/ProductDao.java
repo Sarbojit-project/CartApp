@@ -8,9 +8,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-
+/**
+ *
+ * @author punor
+ */
 public class ProductDao {
-    private SessionFactory factory;
+     private SessionFactory factory;
     
     public ProductDao(SessionFactory factory){
         this.factory=factory;
@@ -45,5 +48,6 @@ public class ProductDao {
         return list;
         
     } 
+    
     
 }

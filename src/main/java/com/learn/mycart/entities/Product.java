@@ -8,8 +8,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+
 @Entity
-public class Product {
+public class Product { 
+    
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int Pid;
@@ -111,5 +113,9 @@ public class Product {
             int d=(int)((this.getpDiscount()/100.0)*this.getpPrice());
             return this.getpPrice()-d;
         }
+    
+
+    
+    
     
 }

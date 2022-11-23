@@ -22,15 +22,15 @@
 
         <div class="row mt-3 mx-2">
             
-            <%
+           <%
                 String cat=request.getParameter("category");
-//out.println(cat);
                 ProductDao dao = new ProductDao(FactoryProvider.getFactory());
-                 List<Product> list =null;
-                 
+                 List<Product> list = null;
+                
                  if(cat==null || cat.trim().equals("all")){
-                list = dao.getAllProducts();
-                }else{
+                   list= dao.getAllProducts();
+                }
+                else{
                 int cid=Integer.parseInt(cat.trim());
                 list= dao.getAllProductsById(cid);
                 
@@ -41,7 +41,7 @@
                 CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
                 List<Category> clist = cdao.getCategories();
 
-            %>
+            %> 
             <!-- show  category -->
             <div class="col-md-2">
               
